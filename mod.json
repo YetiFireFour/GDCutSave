@@ -1,0 +1,18 @@
+{
+  "geode": "v4.0.0",
+  "gd": { "win": "2.2081" },
+  "id": "showcase.gd-cut-save",
+  "name": "GD CutSave",
+  "version": "v1.0.0",
+  "developer": "GDCutSave",
+  "description": "Capture Geometry Dash showcase snapshots during unpaused gameplay.",
+  "settings": {
+    "save-cut": {
+      "name": "Save Showcase Cut",
+      "description": "Capture a snapshot while playing. Default key: F.",
+      "type": "keybind",
+      "default": "F",
+      "category": "gameplay"
+    }
+  }
+}
