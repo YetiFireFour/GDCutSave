@@ -1,0 +1,28 @@
+
+name: Build GDCutSave
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install build tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake ninja-build clang
+
+      - name: Build Geode mod
+        uses: geode-sdk/build-geode-mod@main
+
+      - name: Upload mod artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: GDCutSave-geode
+          path: build/**/*.geode
+          if-no-files-found: error
